@@ -1,5 +1,5 @@
 package com.api.dto;
 
-public enum CustomerType {
+public enum ProductType {
     SILVER, GOLD, PLATINUM
 }

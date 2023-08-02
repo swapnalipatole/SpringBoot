@@ -2,17 +2,17 @@ package com.api.dto;
 
 import java.time.LocalDate;
 
-public class CustomerDTO {
-    private Integer customerId;
+public class ProductDTO {
+    private Integer ProductId;
     private String emailId;
     private String name;
     private LocalDate dateOfBirth;
-    private CustomerType customerType;
-    public Integer getCustomerId() {
-        return customerId;
+    private ProductType productType;
+    public Integer getProductId() {
+        return ProductId;
     }
-    public void setCustomerId(Integer customerId) {
-        this.customerId = customerId;
+    public void setProductId(Integer ProductId) {
+        this.ProductId = ProductId;
     }
     public String getEmailId() {
         return emailId;
@@ -32,15 +32,15 @@ public class CustomerDTO {
     public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
-    public CustomerType getCustomerType() {
-        return customerType;
+    public ProductType getProductType() {
+        return productType;
     }
-    public void setCustomerType(CustomerType customerType) {
-        this.customerType = customerType;
+    public void setProductType(ProductType productType) {
+        this.productType = productType;
     }
     @Override
     public String toString() {
-        return "CustomerDTO [customerId=" + customerId + ", emailId=" + emailId + ", name=" + name + ", dateOfBirth="
+        return "ProductDTO [ProductId=" + ProductId + ", emailId=" + emailId + ", name=" + name + ", dateOfBirth="
                 + dateOfBirth + "]";
     }
 

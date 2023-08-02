@@ -1,6 +1,6 @@
 package com.api.entity;
 
-import com.api.dto.CustomerType;
+import com.api.dto.ProductType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -9,19 +9,19 @@ import jakarta.persistence.Id;
 import java.time.LocalDate;
 
 @Entity
-public class Customer {
+public class Product {
     @Id
-    private Integer customerId;
+    private Integer ProductId;
     private String emailId;
     private String name;
     private LocalDate dateOfBirth;
     @Enumerated(value= EnumType.STRING)
-    private CustomerType customerType;
-    public Integer getCustomerId() {
-        return customerId;
+    private ProductType productType;
+    public Integer getProductId() {
+        return ProductId;
     }
-    public void setCustomerId(Integer customerId) {
-        this.customerId = customerId;
+    public void setProductId(Integer ProductId) {
+        this.ProductId = ProductId;
     }
     public String getEmailId() {
         return emailId;
@@ -41,22 +41,22 @@ public class Customer {
     public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
-    public CustomerType getCustomerType() {
-        return customerType;
+    public ProductType getProductType() {
+        return productType;
     }
-    public void setCustomerType(CustomerType customerType) {
-        this.customerType = customerType;
+    public void setProductType(ProductType productType) {
+        this.productType = productType;
     }
     @Override
     public String toString() {
-        return "Customer [customerId=" + customerId + ", emailId=" + emailId + ", name=" + name + ", dateOfBirth="
-                + dateOfBirth + ", customerType=" + customerType + "]";
+        return "Product [ProductId=" + ProductId + ", emailId=" + emailId + ", name=" + name + ", dateOfBirth="
+                + dateOfBirth + ", ProductType=" + productType + "]";
     }
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((this.getCustomerId() == null) ? 0 : this.getCustomerId().hashCode());
+        result = prime * result + ((this.getProductId() == null) ? 0 : this.getProductId().hashCode());
         return result;
     }
     @Override
@@ -67,12 +67,12 @@ public class Customer {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Customer other = (Customer) obj;
-        if (this.getCustomerId() == null) {
-            if (other.getCustomerId() != null)
+        Product other = (Product) obj;
+        if (this.getProductId() == null) {
+            if (other.getProductId() != null)
                 return false;
         }
-        else if (!this.getCustomerId().equals(other.getCustomerId()))
+        else if (!this.getProductId().equals(other.getProductId()))
             return false;
         return true;
     }
